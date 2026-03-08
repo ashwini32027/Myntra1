@@ -21,5 +21,10 @@ public class Hometest extends Base {
 		Assert.assertTrue(ok.verifyhome());
 		
 	}
+	@Test
+	void lol()
+	{
+		Assert.assertTrue(ok.tit());
+	}
 
 }

@@ -17,6 +17,11 @@ public class HomePage {
 		 String url=driver.getCurrentUrl();
 		 return driver.getCurrentUrl().equals(url);
 	 }
+	public boolean tit()
+	{
+String title=driver.getTitle();
+		return driver.getTitle().equals(title); 
+	}
 	 
 
 }
