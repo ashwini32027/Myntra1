@@ -13,7 +13,7 @@ public void setup()
 {
 	driver=new ChromeDriver();
 	driver.manage().window().maximize();
-	driver.get("https://www.google.com/");
+	driver.get("https://www.myntra.com/");
 }
 @AfterMethod
 public void close()
