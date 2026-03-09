@@ -1,5 +1,8 @@
 package pages;
 
-public class Addtocart {
+import base.Base;
+
+public class Addtocart extends Base{
+	
 
 }

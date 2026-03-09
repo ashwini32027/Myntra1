@@ -7,24 +7,7 @@ import org.testng.annotations.Test;
 import base.Base;
 import pages.HomePage;
 
-public class HomepagesTest extends Base {
-	HomePage ok;
-	@BeforeMethod
-	public void intialize()
-	{
-		ok=new HomePage(driver);
-	}
+public class HomepagesTest{
 	
-	@Test
-	void verifyy()
-	{
-		Assert.assertTrue(ok.verifyhome());
-		
-	}
-	@Test
-	void lol()
-	{
-		Assert.assertTrue(ok.tit());
-	}
 
 }

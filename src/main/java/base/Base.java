@@ -14,17 +14,7 @@ public class Base {
 		PageFactory.initElements(driver,this);
 	}
 
+}
+
+
 	
-@BeforeMethod
-public void setup()
-{
-	driver=new ChromeDriver();
-	driver.manage().window().maximize();
-	driver.get("https://www.myntra.com/");
-}
-@AfterMethod
-public void close()
-{
-	driver.quit();
-}
-}

@@ -3,15 +3,13 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage {
-	WebDriver driver;
+import base.Base;
+
+public class HomePage extends Base{
 	
-	public HomePage(WebDriver driver)
-	{
-		this.driver=driver;
-		PageFactory.initElements(driver, this);
+	public HomePage(WebDriver driver) {
+		super(driver);
 	}
-	
 	public boolean verifyhome()
 	 {
 		 String url=driver.getCurrentUrl();
@@ -20,7 +18,7 @@ public class HomePage {
 	public boolean tit()
 	{
 String title=driver.getTitle();
-		return driver.getTitle().equals(title); 
+return driver.getTitle().equals(title); 
 	}
 	 
 
