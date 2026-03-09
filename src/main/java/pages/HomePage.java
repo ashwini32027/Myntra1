@@ -5,10 +5,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import base.Base;
 
-public class HomePage extends Base{
+public class HomePage extends Base {
+	
 	
 	public HomePage(WebDriver driver) {
 		super(driver);
+		// TODO Auto-generated constructor stub
 	}
 	public boolean verifyhome()
 	 {
@@ -18,7 +20,7 @@ public class HomePage extends Base{
 	public boolean tit()
 	{
 String title=driver.getTitle();
-return driver.getTitle().equals(title); 
+		return driver.getTitle().equals(title); 
 	}
 	 
 

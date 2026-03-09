@@ -6,8 +6,8 @@
       <class name="tests.SearchproductTest">
         <methods>
           <include name="close"/>
-          <include name="validproudct"/>
           <include name="intialize"/>
+          <include name="validproudct"/>
           <include name="setup"/>
         </methods>
       </class> <!-- tests.SearchproductTest -->

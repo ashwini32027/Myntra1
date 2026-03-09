@@ -29,6 +29,10 @@ public class Searchproduct extends Base {
 	@FindBy(xpath="//div[normalize-space()='ADD TO BAG']")
 	 WebElement bag;
 	
+	//invalid
+	@FindBy(xpath="//img[@class='index-notFoundImage']")
+	WebElement inavalidproduct;
+	
 	public void searchvalidproduct(String name)
 	{
 		searchbtn.click();
@@ -50,5 +54,9 @@ public class Searchproduct extends Base {
 	        return bag.isDisplayed();
 	}
 
+	public boolean invalidpr()
+	{
+		return inavalidproduct.isDisplayed();
+	}
 	
 }
