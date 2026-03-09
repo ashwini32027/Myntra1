@@ -2,28 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-09T19:42:24 IST" name="Default suite" finished-at="2026-03-09T19:42:59 IST" duration-ms="35752">
+  <suite started-at="2026-03-09T20:13:28 IST" name="Default suite" finished-at="2026-03-09T20:13:54 IST" duration-ms="25577">
     <groups>
     </groups>
-    <test started-at="2026-03-09T19:42:24 IST" name="Default test" finished-at="2026-03-09T19:42:59 IST" duration-ms="35752">
-      <class name="tests.SearchproductTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.SearchproductTest@3754a4bf]" started-at="2026-03-09T19:42:24 IST" name="setup" finished-at="2026-03-09T19:42:40 IST" duration-ms="15986" status="PASS">
+    <test started-at="2026-03-09T20:13:28 IST" name="Default test" finished-at="2026-03-09T20:13:54 IST" duration-ms="25577">
+      <class name="tests.AddToCartTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.AddToCartTest@776aec5c]" started-at="2026-03-09T20:13:28 IST" name="setup" finished-at="2026-03-09T20:13:42 IST" duration-ms="13789" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="intialize()[pri:0, instance:tests.SearchproductTest@3754a4bf]" started-at="2026-03-09T19:42:40 IST" name="intialize" finished-at="2026-03-09T19:42:40 IST" duration-ms="96" status="PASS">
+        <test-method signature="verifyValidAddProduct()[pri:0, instance:tests.AddToCartTest@776aec5c]" started-at="2026-03-09T20:13:42 IST" name="verifyValidAddProduct" finished-at="2026-03-09T20:13:53 IST" duration-ms="11134" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- intialize -->
-        <test-method signature="validproudct()[pri:0, instance:tests.SearchproductTest@3754a4bf]" started-at="2026-03-09T19:42:40 IST" name="validproudct" finished-at="2026-03-09T19:42:56 IST" duration-ms="15878" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validproudct -->
-        <test-method is-config="true" signature="close()[pri:0, instance:tests.SearchproductTest@3754a4bf]" started-at="2026-03-09T19:42:56 IST" name="close" finished-at="2026-03-09T19:42:59 IST" duration-ms="3559" status="PASS">
+        </test-method> <!-- verifyValidAddProduct -->
+        <test-method is-config="true" signature="close()[pri:0, instance:tests.AddToCartTest@776aec5c]" started-at="2026-03-09T20:13:53 IST" name="close" finished-at="2026-03-09T20:13:54 IST" duration-ms="571" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- tests.SearchproductTest -->
+      </class> <!-- tests.AddToCartTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

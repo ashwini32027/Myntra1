@@ -3,8 +3,6 @@ package pages;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -32,7 +30,7 @@ public class Searchproduct extends Base {
 	public void searchvalidproduct(String name)
 	{
 		searchbtn.click();
-	 searchbtn.sendKeys(name,Keys.ENTER);
+	 searchbtn.sendKeys(name,Keys.ENTER); 
 	}
 	public int addallproduct()
 	{
