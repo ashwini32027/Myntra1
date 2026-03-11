@@ -16,14 +16,14 @@ public class SearchproductTest extends BaseTestClass
 	{
 		sp=new Searchproduct(driver);
 	}
-	@Test(priority=1)
+	@Test()
 	void validproudct()
 	{
 		sp.searchvalidproduct("Asian men Sneaker");
-		sp.clickproduct(7);
+		sp.clickproduct(4);
 		Assert.assertTrue(sp.productpage());
 	}
-	@Test(priority=2)
+	@Test(priority=1)
 	void InvalidProduct() {
 		sp.searchvalidproduct("123");
 		Assert.assertTrue(sp.invalidpr());
