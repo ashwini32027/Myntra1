@@ -11,15 +11,28 @@ public class Singleprice  extends Base{
 	public Singleprice(WebDriver driver) {
 		super(driver);
 	}
-	@FindBy(xpath="//div[contains(@class,'itemComponents-base-price itemComponents-base-bold')]//div")
+	//Price check
+	@FindBy(xpath="//span[@class='pdp-price']//strong")
 	WebElement price;
-	public void getprice() {
+	@FindBy(xpath="//div[contains(@class,'priceDetail-base-total')]//span[contains(@class,'priceDetail-base-value')]//span[2]")
+	WebElement totalprice;
+	
+	//price for single product 
+	public int getprice() {
 	    String txt = price.getText();
-	   for(int i=0;i<10;i++)
-	   {
-		   System.out.print(i +" ");
-	   }
-	    System.out.println("Product Price: " + txt);
+	    txt = txt.replaceAll("[^0-9]","").trim();
+	    int singleprice=Integer.parseInt(txt);
+	    return singleprice;
 	}
-
+	public int getTotalPrice()
+	{	
+	 String txt=totalprice.getText();
+	 //System.out.println(txt);
+	 //int singleprice=getprice() +23;
+	 txt = txt.replaceAll("[^0-9]","").trim();
+	 int totalprice=Integer.parseInt(txt);
+     return totalprice;		
+	}
+	
+    
 }

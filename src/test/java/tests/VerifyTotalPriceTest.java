@@ -22,18 +22,20 @@ public class VerifyTotalPriceTest extends BaseTestClass{
 		cart=new Addtocart(driver);
 		inr=new Singleprice(driver);
 	}
-	
 	@Test
 	public void verifysingleprice()
 	{
 		sp.searchvalidproduct("Asian men Sneaker");
 		sp.clickproduct(4);
 		sp.productpage();
+		int productpageprice = inr.getprice();
+		productpageprice+=23;
 		cart.selectSize(); 
 		cart.clickAddToCart(); 
 		cart.openCart(); 
 		Assert.assertTrue(cart.isProductDisplayed(), "Product was NOT added to cart");
-		inr.getprice();
+		Assert.assertEquals(productpageprice,inr.getTotalPrice());
 	}
 
+	
 }
