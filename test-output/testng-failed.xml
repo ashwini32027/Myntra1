@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.VerifyTotalPriceTest">
+      <class name="tests.UpdateQuantityTest">
         <methods>
           <include name="close"/>
           <include name="setup"/>
-          <include name="verifysingleprice"/>
+          <include name="verifyQuantityupdate"/>
           <include name="intialize"/>
         </methods>
-      </class> <!-- tests.VerifyTotalPriceTest -->
+      </class> <!-- tests.UpdateQuantityTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

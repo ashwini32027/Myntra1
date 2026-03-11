@@ -20,8 +20,9 @@ public class UpdateQuantityTest extends BaseTestClass{
 	@Test
 	public void verifyQuantityupdate()
 	{
+		
 		sp.searchvalidproduct("Asian men Sneaker");
-		sp.clickproduct(7);
+		sp.clickproduct(8);
 		sp.productpage();
 		Addtocart cart=new Addtocart(driver);
 		cart.selectSize(); 
@@ -30,10 +31,9 @@ public class UpdateQuantityTest extends BaseTestClass{
 		Assert.assertTrue(cart.isProductDisplayed(), "Product was NOT added to cart");
 		cart.clickonquantity();
 		cart.verifyhoverpage();
-		cart.sizeselect();
+		cart.quantitySelect();
 		cart.doneclick();
 		Assert.assertTrue(cart.verifyquantity("3"));
-			
 	}
 
 }

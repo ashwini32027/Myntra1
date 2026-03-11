@@ -1,9 +1,13 @@
 package pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import base.Base;
 
@@ -30,7 +34,7 @@ public class Addtocart extends Base{
 	@FindBy(xpath="//div[@class='modal-base-modal dialogs-base-quantityContainer']")
 	WebElement quantitypagehover;
 	@FindBy(xpath="//div[@class='dialogs-base-display'][normalize-space()='3']")
-	WebElement selectsize;
+	WebElement qtyselect;
 	@FindBy(xpath="//div[normalize-space()='DONE']")
 	WebElement clickdone;
 	
@@ -64,10 +68,14 @@ public class Addtocart extends Base{
 	{
 		return quantitypagehover.isDisplayed();
 	}
-	public void sizeselect()
-	{
-		selectsize.click();
+	
+	//iska name galat ha sahi karna hoga
+	public void quantitySelect() {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    WebElement qtyElement = wait.until(ExpectedConditions.elementToBeClickable(qtyselect));
+	    qtyElement.click();
 	}
+
 	public void doneclick()
 	{
 		clickdone.click();
