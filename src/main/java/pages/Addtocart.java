@@ -120,12 +120,6 @@ public class Addtocart extends Base{
 		}
 		return false;
 	}
-	public boolean compareunitprice(int productprice, int totalprice) {
-		productprice*=10;
-		productprice+=23;
-		if(productprice==totalprice)
-		return true;
-		return false;
-	}
+	
 
 }

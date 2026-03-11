@@ -34,5 +34,13 @@ public class Singleprice  extends Base{
      return totalprice;		
 	}
 	
+	public boolean compareunitprice(int productprice, int totalprice) {
+		productprice*=10;
+		productprice+=23;
+		if(productprice==totalprice)
+		return true;
+		return false;
+	}
+	
     
 }

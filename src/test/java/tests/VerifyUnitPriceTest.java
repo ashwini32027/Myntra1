@@ -37,7 +37,7 @@ public class VerifyUnitPriceTest extends BaseTestClass{
 		cart.doneclick();
 		Assert.assertTrue(cart.verifyquantity("10"));
 		//int totalPrice=inr.getTotalPrice();
-		Assert.assertTrue(cart.compareunitprice(productpageprice,inr.getTotalPrice()), "qty wise price not update");
+		Assert.assertTrue(inr.compareunitprice(productpageprice,inr.getTotalPrice()), "qty wise price not update");
 		
 	}
 }
