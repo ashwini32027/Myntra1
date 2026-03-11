@@ -36,6 +36,24 @@ public class VerifyTotalPriceTest extends BaseTestClass{
 		Assert.assertTrue(cart.isProductDisplayed(), "Product was NOT added to cart");
 		Assert.assertEquals(productpageprice,inr.getTotalPrice());
 	}
+	
+	@Test
+	public void verifyPriceMismatch()
+	{
+		sp.searchvalidproduct("Asian men Sneaker");
+		sp.clickproduct(4);
+		sp.productpage();
+		int productpageprice = inr.getprice();
+		productpageprice+=23;
+		cart.selectSize(2); 
+		cart.clickAddToCart(); 
+		cart.openCart(); 
+		Assert.assertTrue(cart.isProductDisplayed(), "Product was NOT added to cart");
+		Assert.assertFalse(
+				cart.verifyPriceMismatch(productpageprice, inr.getTotalPrice()), 
+				"Product Price is MisMatched"
+				);
 
+	}
 	
 }

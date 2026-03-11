@@ -35,5 +35,37 @@ public class UpdateQuantityTest extends BaseTestClass{
 		cart.doneclick();
 		Assert.assertTrue(cart.verifyquantity("3"));
 	}
+	
+	@Test
+	public void quantityUpdateToZero() {
+		sp.searchvalidproduct("Asian men Sneaker");
+		sp.clickproduct(7);
+		sp.productpage();
+		Addtocart cart=new Addtocart(driver);
+		cart.selectSize(2); 
+		cart.clickAddToCart(); 
+		cart.openCart(); 
+		Assert.assertTrue(cart.isProductDisplayed(), "Product was NOT added to cart");
+		cart.clickonquantity();
+		cart.verifyhoverpage();
+		Assert.assertFalse(cart.setqtyzero());
+	}
+	
+	@Test
+	public void verifyMaximamQty() {
+		sp.searchvalidproduct("Asian men Sneaker");
+		sp.clickproduct(7);
+		sp.productpage();
+		Addtocart cart=new Addtocart(driver);
+		cart.selectSize(2); 
+		cart.clickAddToCart(); 
+		cart.openCart(); 
+		Assert.assertTrue(cart.isProductDisplayed(), "Product was NOT added to cart");
+		cart.clickonquantity();
+		cart.verifyhoverpage();
+		cart.setQtyMax();
+		cart.doneclick();
+		Assert.assertTrue(cart.verifyquantity("10"));
+	}
 
 }

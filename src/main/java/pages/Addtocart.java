@@ -35,10 +35,15 @@ public class Addtocart extends Base{
 	WebElement quantitypagehover;
 	@FindBy(xpath="//div[@class='dialogs-base-display'][normalize-space()='3']")
 	WebElement qtyselect;
+	@FindBy(xpath="//div[@class='dialogs-base-display'][normalize-space()='0']")
+	WebElement qtyzero;
+	@FindBy(xpath="//div[@class='dialogs-base-display'][normalize-space()='10']")
+	WebElement maxqty;
 	@FindBy(xpath="//div[normalize-space()='DONE']")
 	WebElement clickdone;
 	
-	
+	@FindBy(xpath="//span[@class='size-buttons-size-error-message']")
+	WebElement errmsg;
 	
 	
 	public void selectSize(int size) {
@@ -86,7 +91,41 @@ public class Addtocart extends Base{
         return quan.isDisplayed();		
 	}
 	
+	public boolean setqtyzero() {
+		try {
+			qtyzero.click();
+		}
+		catch(org.openqa.selenium.NoSuchElementException e) {
+			return false;
+		}
+		return true;
+	}
 	
+	public void setQtyMax() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    WebElement qtyElement = wait.until(ExpectedConditions.elementToBeClickable(maxqty));
+	    qtyElement.click();
+	}
 	
+	public boolean verifyErrMsg() {
+		if(errmsg.getText().contains("Please select a size")) {
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean verifyPriceMismatch(int productprice, int totalprice) {
+		if(productprice!=totalprice) {
+			return true;
+		}
+		return false;
+	}
+	public boolean compareunitprice(int productprice, int totalprice) {
+		productprice*=10;
+		productprice+=23;
+		if(productprice==totalprice)
+		return true;
+		return false;
+	}
 
 }

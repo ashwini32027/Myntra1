@@ -29,5 +29,13 @@ public class AddToCartTest extends BaseTestClass{
 		Assert.assertTrue(cart.isProductDisplayed(), "Product was NOT added to cart");
 	}
 	
-	
+	@Test
+	public void verifyAddWithoutSize() {
+		sp.searchvalidproduct("Asian men Sneaker");
+		sp.clickproduct(7);
+		sp.productpage();
+		cart.clickAddToCart(); 
+		Assert.assertTrue(cart.verifyErrMsg(), "Product was added with selecting size");
+	}
+
 }
