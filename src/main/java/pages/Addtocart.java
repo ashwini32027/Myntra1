@@ -1,6 +1,7 @@
 package pages;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -24,9 +25,8 @@ public class Addtocart extends Base{
 	@FindBy(xpath = "//span[@class='myntraweb-sprite desktop-iconBag sprites-headerBag']") 
 	WebElement bagIcon; 
 	
-	@FindBy(xpath="(//div[contains(@class,'size-buttons-size-buttons')]//button)[1]")
-	WebElement firstSize;
-	
+	@FindBy(xpath="//button[contains(@class,'size-buttons-size-button')]")
+	List<WebElement>totalsizes;	
 	
 	//Quantiy update locator
 	@FindBy(xpath="//span[normalize-space()='Qty: 1']")
@@ -41,8 +41,8 @@ public class Addtocart extends Base{
 	
 	
 	
-	public void selectSize() {
-	    firstSize.click();
+	public void selectSize(int size) {
+		totalsizes.get(size).click();
 	}
 	
 	public boolean isProductDisplayed() { 

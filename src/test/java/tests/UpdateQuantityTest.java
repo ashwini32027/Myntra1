@@ -22,10 +22,10 @@ public class UpdateQuantityTest extends BaseTestClass{
 	{
 		
 		sp.searchvalidproduct("Asian men Sneaker");
-		sp.clickproduct(8);
+		sp.clickproduct(7);
 		sp.productpage();
 		Addtocart cart=new Addtocart(driver);
-		cart.selectSize(); 
+		cart.selectSize(2); 
 		cart.clickAddToCart(); 
 		cart.openCart(); 
 		Assert.assertTrue(cart.isProductDisplayed(), "Product was NOT added to cart");

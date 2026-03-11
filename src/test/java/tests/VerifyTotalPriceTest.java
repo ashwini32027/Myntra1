@@ -30,7 +30,7 @@ public class VerifyTotalPriceTest extends BaseTestClass{
 		sp.productpage();
 		int productpageprice = inr.getprice();
 		productpageprice+=23;
-		cart.selectSize(); 
+		cart.selectSize(2); 
 		cart.clickAddToCart(); 
 		cart.openCart(); 
 		Assert.assertTrue(cart.isProductDisplayed(), "Product was NOT added to cart");
