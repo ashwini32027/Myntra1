@@ -23,7 +23,7 @@ public class AddToCartTest extends BaseTestClass{
 		sp.searchvalidproduct("Asian men Sneaker");
 		sp.clickproduct(7);
 		sp.productpage();
-		cart.selectSize(1); 
+		cart.selectSize(2); 
 		cart.clickAddToCart(); 
 		cart.openCart(); 
 		Assert.assertTrue(cart.isProductDisplayed(), "Product was NOT added to cart");

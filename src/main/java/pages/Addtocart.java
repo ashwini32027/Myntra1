@@ -91,6 +91,7 @@ public class Addtocart extends Base{
         return quan.isDisplayed();		
 	}
 	
+
 	public boolean setqtyzero() {
 		try {
 			qtyzero.click();
