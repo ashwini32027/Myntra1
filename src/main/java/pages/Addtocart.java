@@ -86,7 +86,4 @@ public class Addtocart extends Base{
         return quan.isDisplayed();		
 	}
 	
-	
-	
-
 }
